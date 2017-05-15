@@ -1,0 +1,11 @@
+image: buildpack-deps:jessie
+variables:
+    # Replace this variable with your context name
+    CONTEXT_NAME: "npm"
+
+# Make sure the following variables to your project's secret variables: FTP_LOCATION, FTP_PASSWORD, FTP_USERNAME
+
+compile:
+    script:
+        - "curl -k -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T $CONTEXT_NAME.jsonld \"$FTP_LOCATION/$CONTEXT_NAME.jsonld\""
+
