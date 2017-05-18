@@ -62,6 +62,6 @@
         "main"                 : "npm:main",
 
         "oo"                   : "https://linkedsoftwaredependencies.org/vocabularies/object-oriented#",
-        "lsd:components"       : { "@id": "oo:components" }
+        "lsd:components"       : { "@id": "oo:component", "@type": "@id" }
     }
 }
